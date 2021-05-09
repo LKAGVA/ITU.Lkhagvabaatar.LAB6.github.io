@@ -1,0 +1,54 @@
+.contents {
+    position: absolute;  
+    width: 100%;
+    top: 82%;
+    .row {
+        width: 95%;
+        margin: auto;
+        color: $white;
+        &__title {
+            margin-bottom: .6rem;    
+            margin-left: 1.5rem;        
+        }
+        &__contents {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 350px);
+            grid-template-rows: repeat(1, 350px);
+            gap: 5px;
+            margin-bottom: 2rem;
+            @media (max-width: 812px) {
+              grid-template-columns: repeat(5, 150px);
+              grid-template-rows: repeat(1, 250px);
+            }
+            @media (max-width: 668px) {
+              grid-template-columns: repeat(4, 100px);
+              grid-template-rows: repeat(1, 100px);
+            }
+            .box {
+              border-radius: $bradius;
+              background-color: $buttonColor;
+              @include bgRepeat;
+              &:hover {
+                color: $white;
+                cursor: pointer;
+                background: linear-gradient(to top,#161616 0%,rgba(22,22,22,0) 100%);
+                background-repeat: no-repeat;
+                margin: 0 1rem;
+              }
+                
+              .box_name {
+                p {
+                  margin: 1rem;
+                  color: $hover;
+                  &:hover {
+                    color: $white;
+                  }
+                }
+              }
+            }
+        }
+    }
+    
+    
+}
